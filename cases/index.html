@@ -1,0 +1,11 @@
+{% if cases_list %}
+    <p>ID, IssueID, 版本, 摘要</p>
+    <ul>
+    {% for case in cases_list %}
+        <li>{{case.id}}, {{case.issue}}, {{case.version}}, {{case.summary}}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No case found.</p>
+{% endif %}
+
